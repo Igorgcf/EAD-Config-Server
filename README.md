@@ -1,9 +1,9 @@
 # Config Server – Microservice
 
-## Servidor central de configuração da plataforma EAD, responsável por armazenar, versionar e distribuir propriedades para os microserviços.
-## Implementado com Java, Spring Boot e Spring Cloud Config, com integração ao Eureka para descoberta de serviços.
+### Servidor central de configuração da plataforma EAD, responsável por armazenar, versionar e distribuir propriedades para os microserviços.
+### Implementado com Java, Spring Boot e Spring Cloud Config, com integração ao Eureka para descoberta de serviços.
 
-### Descrição do Projeto
+* #### Descrição do Projeto
 
 O Config Server é um componente fundamental da arquitetura distribuída da plataforma, responsável por garantir que todos os microserviços compartilhem configurações consistentes e atualizadas a partir de uma fonte centralizada.
 
