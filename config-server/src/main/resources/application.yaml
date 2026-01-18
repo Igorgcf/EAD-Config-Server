@@ -12,10 +12,19 @@ spring:
   output:
     ansi:
       enabled: always
+
+ead:
+  configserver:
+    username: configserver
+    password: ead-secret
+  serviceRegistry:
+    username: ead-admin
+    password: ead-secret
+
 eureka:
   client:
     serviceUrl:
-      defaultZone: 'http://localhost:8761/eureka'
+      defaultZone: 'http://ead-admin:ead-secret@localhost:8761/eureka'
   instance:
     hostname: localhost
 
