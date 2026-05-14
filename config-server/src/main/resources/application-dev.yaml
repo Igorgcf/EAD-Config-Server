@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Igorgcf/EAD-Config-Server-Repo
+  output:
+    ansi:
+      enabled: always
+
+encrypt:
+  key: qiMi5UXgBzhXqROrkJq67xh1t6iT7Jmbzxvcolq7WzGz9QeLnfolfY4KbMQoy3NyKpUUAi4NaAcGnSoLOGs5XXQgV9mFOomswDzLEUKeV5nV05cO3pFV7vOlQk5tsD0R8XXveQ7Va28ziPSgEAB815ItqkMRj715I4eFXdUcelaYxs8LSYTiD390jY6r8ZUIbRX3OpnBEfKQrzKqjY332bCTrCsU2nDyQnmJclWWAHnuw89i1UUJNpEPFzs8yjNb
+
+ead:
+  configserver:
+    username: configserver
+    password: ead-secret
+  serviceRegistry:
+    username: ead-admin
+    password: ead-secret
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: 'http://ead-admin:ead-secret@localhost:8761/eureka'
+  instance:
+    hostname: localhost
+
