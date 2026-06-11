@@ -6,7 +6,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Igorgcf/EAD-Config-Server-Repo
+          uri: https://github.com/Igorgcf/EAD-Config-Server-Repo.git
+          username: ${GIT_USERNAME}
+          password: ${CONFIG_REPO_GITHUB_TOKEN}
   output:
     ansi:
       enabled: always
@@ -16,16 +18,16 @@ encrypt:
 
 ead:
   configserver:
-    username: configserver
-    password: ead-secret
+    username: ${CONFIG_SERVER_USERNAME}
+    password: ${CONFIG_SERVER_PASSWORD}
   serviceRegistry:
-    username: ead-admin
-    password: ead-secret
+    username: ${EUREKA_SERVICE_USERNAME}
+    password: ${EUREKA_SERVICE_PASSWORD}
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: 'http://ead-admin:ead-secret@localhost:8761/eureka'
+      defaultZone: 'http://${ead.serviceRegistry.username}:${ead.serviceRegistry.password}@localhost:8761/eureka'
   instance:
     hostname: localhost
 
